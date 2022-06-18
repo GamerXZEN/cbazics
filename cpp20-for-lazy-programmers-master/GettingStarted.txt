@@ -1,0 +1,54 @@
+To create your own programs with SSDL, see the newWork folder.
+
+========== Installation of SSDL =================================
+
+SSDL is built into this repository. No installation is needed.
+
+-========= Installation of SDL2 and other helper libraries===============
+
+Visual Studio and MinGW: No installation is needed.
+
+Unix: In C++20 for Lazy Programmers, see Chapter 1 and Appendix A.
+
+Note to Unix users (but probably not those using Ubuntu, Fedora/RedHat, 
+OpenSuSe, and Manjaro): if the test program says it can't find fonts, see 
+external/SSDL/src/SSDL_display.cpp, look for the comment 
+"If none of these font paths work..." and do what it says.
+
+Note for Manjaro users: the implementation of Microsoft Core Fonts for 
+the Web I used, via this command (YMMV):   pamac build ttf-ms-fonts
+...puts capitalization in some but not all the filenames. This is 
+inconsistent with other versions of Unix.  Rather than make a special 
+library just for Manjaro (!), I renamed all used fonts, eliminating capital
+letters -- especially
+Arial.TTF   -> arial.ttf
+Comic.TTF   -> comic.ttf
+Georgiab.TTF-> georgiab.ttf
+Timesbd.TTF -> timesbd.ttf
+Verdana.TTF -> verdana.ttf
+
+========== How to use example SSDL programs ====================
+
+Microsoft Visual Studio:
+
+Open SSDL_Project.sln in the chapter folder. If it asks do you want to retarget projects, or really load them, say OK.
+Right-click the project you want to run and Debug > Start New Instance.
+
+
+MinGW:
+
+Go into the project folder; 
+  copy Makefile.mingw to Makefile; 
+  make
+To run,      bash mingw
+To debug, bash gdbw
+
+Unix:
+
+Go into the project folder; 
+  copy Makefile.unix to Makefile; 
+  make
+To run,       ./runx
+To debug,  ./dddx or ./gdbx.
+
+

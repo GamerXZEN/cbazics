@@ -1,0 +1,10 @@
+#include "iostream"
+#include "stdafx.h"
+using namespace System;
+
+
+int main()
+{
+    Console.WriteLine("Bye Boy");
+    return 0;
+}
